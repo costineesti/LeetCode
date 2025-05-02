@@ -17,6 +17,7 @@ public:
 // O[n] solution
 #include <vector>
 #include <unordered_map>
+#include <iostream>
 class Solution {
 public:
     std::vector<int> twoSum(std::vector<int>& nums, const int target) {
@@ -32,6 +33,17 @@ public:
         return {}; // won't reach here as per the problem constraints
     }
 };
+
+int main(){
+    Solution s;
+    std::vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
+    std::vector<int> result = s.twoSum(nums, target);
+    for (int i : result) {
+        std::cout << i << " ";
+    }
+    return 0;
+}
 
 /*
 nums = [2 7 11 15], target = 9
